@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,200;0,300;0,400;0,700;1,500;1,700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'MuseoModerno', sans-serif;
+}
+
+:root {
+    --text-color: #000000;
+    --bg-color: #e5e5e5;
+    --second-color: #fff;
+    --big-font: 4.5rem;
+    --p-font: 1rem;
+    --main-color: #f29494;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 9%;
+    transition: ease all .55s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo i {
+    vertical-align: middle;
+    color: var(--main-color);
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.links {
+    display: flex;
+
+}
+
+.links a {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 35px;
+    transition: all ease .55s;
+}
+
+.links a:hover {
+    color: var(--main-color);
+}
+
+.links a.active {
+    color: var(--main-color);
+}
+
+.h-main {
+    display: flex;
+    align-items: center;
+}
+
+.h-btn {
+    display: inline-block;
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    margin-right: 20px;
+    transition: all ease .5s;
+}
+
+.h-btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+#darkMode {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+#menu-icon {
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    margin: 15px;
+    display: none;
+}
+
+section {
+    padding: 15% 12%;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-img {
+    height: 500px;
+    width: 500px;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-in {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.hero-text h1 {
+    font-size: var(--big-font);
+    font-weight: 800;
+}
+
+.hero-text h4 {
+    margin: 5px 0 20px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 26px;
+    max-width: 550px;
+    margin-bottom: 4rem;
+}
+
+.box {
+    background-color: var(--second-color);
+    padding: 25px;
+    border-radius: 1rem;
+    transition: all ease .55s;
+    box-shadow: rgba(33, 35, 38, 0.5) 0px 10px 15px -10px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.box h5 {
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.box:hover {
+    transform: translateY(-10px) scale(1.3);
+    /* movimentar o card */
+}
+
+body.color {
+    --text-color: #fff;
+    --bg-color: #081624;
+    --second-color: #2b3544;
+}
+
+@media(max-width:1230px) {
+    header {
+        padding: 3%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .hero-text {
+        order: 2; /*inverter itens*/
+
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+    .hero-img {
+        margin: auto;
+        height: auto;
+        width: auto;
+    }
+    .hero-img img {
+        width: 100%;
+        height: auto;
+        max-width: 650px;
+    }
+    :root {
+        --big-font: 4rem
+        --p-font: 15px
+    }
+    .box h3 {
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+}
+
+@media(max-width:1085px) {
+    header {
+        padding: 10px 3%;
+        background-color: var(--second-color);
+        height: 100px;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .links {
+        position: absolute;
+        top: -700px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        transition: all ease .55s ; 
+        text-align: left; 
+
+    }
+    .links a {
+        color: var(--second-color);
+        font-size: 23px;
+        font-weight: 400;
+        margin: 0.8rem 1.8rem;
+        display: block;
+    }
+    .open {
+        top: 100%;
+
+    }
+}
+@media(max-width:600px) {
+    .hero-in {
+        grid-template-columns: repeat(auto-fit,minmax(190px,auto));
+        gap: 18px;
+    }
+    .box {
+        padding: 10px 30px;
+        margin-right: 8px;
+
+    }
+    .h-btn {
+        padding: 6px 14px;
+    }
+}
+
+@media(max-width:420px) {
+    :root {
+        --big-font: 3rem;
+        --p-font: 14px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    #menu-icon {
+        margin-right: 8px;
+    }
+}
+
+@media(max-width:360px) {
+    .h-btn {
+        padding: 4px 10px;
+        margin-right: 5px;
+    }
+    .logo {
+        font-size: 25px;
+    }
+}
+ 
