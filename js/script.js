@@ -1,13 +1,7 @@
-import {menuHamburguer,menuIcon,links} from './menuHamburguer.js'
+import { menuHamburguer, menuIcon, links } from './menuHamburguer.js';
 
-menuIcon.addEventListener('click', menuHamburguer, links)
+menuIcon.addEventListener('click', menuHamburguer, links);
 
-
-
-
-import{toggleDarkLigth} from './darkLigth.js'
+import { toggleDarkLigth } from './darkLigth.js';
 
 darkMode.addEventListener('click', toggleDarkLigth);
-
-
-

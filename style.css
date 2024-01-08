@@ -219,27 +219,31 @@ body.color {
     }
 
     .hero-text {
-        order: 2; /*inverter itens*/
+        order: 2;
+        /*inverter itens*/
 
     }
 
     section {
         padding: 50px 5%;
     }
+
     .hero-img {
         margin: auto;
         height: auto;
         width: auto;
     }
+
     .hero-img img {
         width: 100%;
         height: auto;
         max-width: 650px;
     }
+
     :root {
-        --big-font: 4rem
-        --p-font: 15px
+        --big-font: 4rem --p-font: 15px
     }
+
     .box h3 {
         font-size: 20px;
         margin-bottom: 2px;
@@ -252,9 +256,11 @@ body.color {
         background-color: var(--second-color);
         height: 100px;
     }
+
     #menu-icon {
         display: initial;
     }
+
     .links {
         position: absolute;
         top: -700px;
@@ -263,10 +269,11 @@ body.color {
         display: flex;
         flex-direction: column;
         background-color: #000000;
-        transition: all ease .55s ; 
-        text-align: left; 
+        transition: all ease .55s;
+        text-align: left;
 
     }
+
     .links a {
         color: var(--second-color);
         font-size: 23px;
@@ -274,21 +281,25 @@ body.color {
         margin: 0.8rem 1.8rem;
         display: block;
     }
+
     .open {
         top: 100%;
 
     }
 }
+
 @media(max-width:600px) {
     .hero-in {
-        grid-template-columns: repeat(auto-fit,minmax(190px,auto));
+        grid-template-columns: repeat(auto-fit, minmax(190px, auto));
         gap: 18px;
     }
+
     .box {
         padding: 10px 30px;
         margin-right: 8px;
 
     }
+
     .h-btn {
         padding: 6px 14px;
     }
@@ -299,9 +310,11 @@ body.color {
         --big-font: 3rem;
         --p-font: 14px;
     }
+
     .logo {
         font-size: 30px;
     }
+
     #menu-icon {
         margin-right: 8px;
     }
@@ -312,8 +325,8 @@ body.color {
         padding: 4px 10px;
         margin-right: 5px;
     }
+
     .logo {
         font-size: 25px;
     }
 }
- 
